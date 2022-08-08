@@ -1,0 +1,79 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Aug 08, 2022 at 03:45 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `sekolah`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `siswa`
+--
+
+CREATE TABLE `siswa` (
+  `nis` char(10) NOT NULL,
+  `nama` varchar(255) DEFAULT NULL,
+  `jk` char(1) NOT NULL,
+  `tanggal_lahir` date NOT NULL,
+  `tempat_lahir` varchar(100) NOT NULL,
+  `alamat` text NOT NULL,
+  `kelas` varchar(15) NOT NULL,
+  `nilai` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `siswa`
+--
+
+INSERT INTO `siswa` (`nis`, `nama`, `jk`, `tanggal_lahir`, `tempat_lahir`, `alamat`, `kelas`, `nilai`) VALUES
+('12002439', 'ALYA MONIKA', 'P', '2004-08-06', 'BANDUNG', 'PAGADEN', '12 RPL 1', 80.7),
+('12002453', 'ANGGINA NOVIANTI', 'p', '2004-06-12', 'SUBANG', 'RANGGAWULUNG', '12 RPL 1', 80.6),
+('12002478', 'ARIEL FAUZAN HARDIYANA', 'L', '2004-08-13', 'SUBANG', 'CIPAKU', '12 RPL 1', 80.5),
+('12002540', 'DERI AZIHTIANA', 'L', '2004-06-23', 'SUBANG', 'KALIJATI', '12 RPL 1', 81.4),
+('12002541', 'DERI AZIHTIANA', 'L', '2004-08-13', 'SUBANG', 'KALIJATI', '12 RPL 1', 80.2),
+('12002601', 'ELRANGGA RIZKI PANGESTU', 'L', '2004-07-21', 'SUBANG', 'CILENGSI', '12 RPL 1', 80.8),
+('12002617', 'FARHAN MAULANA', 'L', '2004-09-16', 'SUBANG', 'RAWABADAK', '12 RPL 1', 80.9),
+('12002632', 'FERDIN MEIDAL AMBO', 'L', '2004-05-17', 'SUBANG', 'CIGADUNG', '12 RPL 1', 70.9),
+('12002715', 'KAKA ANDHIKA', 'L', '2004-03-03', 'SUBANG', 'CIPAKU', '12 RPL 1', 70.8),
+('12002754', 'LUTHFIYAH AZZAHRA H.', 'p', '2004-04-24', 'SUBANG', 'CIJAMBE', '12 RPL 1', 80.6),
+('12002759', 'M.JAYPUDIN', 'L', '2004-05-24', 'SUBANG', 'SOKLAT', '12 RPL 1', 70.9),
+('12002817', 'MUHAMMAD FAKHRI FIRDAUS', 'L', '2004-05-23', 'SUBANG', 'TANJUNGWANGI', '12 RPL 1', 80.8),
+('12002820', 'MUHAMMAD FIRMANSYAH', 'L', '2004-08-16', 'SUBANG', 'CIPENDEUY', '12 RPL 1', 70.8),
+('12002822', 'MUHAMMAD HEIWA ANUJESI AL KAHFI', 'L', '2003-04-25', 'SUBANG', 'PANDEGRAL', '12 RPL 1', 80.9),
+('12002833', 'MUHAMMAD ZIKRA MUROBI', 'L', '2005-12-31', 'SUBANG', 'CIJAMBE', '12 RPL 1', 70.8),
+('12002837', 'MUTIARA', 'p', '2005-05-19', 'PAGADEN', 'BINONG', '12 RPL 1', 80.2),
+('12002848', 'NAHLA NIDAUL FITROH', 'P', '2004-05-26', 'SUBANG', 'CIJAMBE', '12 RPL 1', 79.6),
+('12002870', 'NINDYA DWI LESTARI', 'p', '2004-04-15', 'SUBANG', 'CIPAKU', '12 RPL 1', 80.8),
+('12002956', 'REVA MAHARANI PUTRI ERAWAN', 'P', '2004-06-25', 'BANDUNG', 'JALANCAGAK', '12 RPL 1', 80.5);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `siswa`
+--
+ALTER TABLE `siswa`
+  ADD PRIMARY KEY (`nis`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
